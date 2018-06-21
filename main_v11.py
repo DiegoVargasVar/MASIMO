@@ -109,8 +109,7 @@ fig.canvas.mpl_connect('close_event', handle_close)
 fig.patch.set_facecolor('black')
 matplotlib.rc('axes',edgecolor='white')
 
-t = range(0,win)
-XTicks2 = np.array(range(0,win,60)) 
+t = range(0,win) 
 count2 =0
 
 while True:
@@ -152,6 +151,8 @@ while True:
 
 
     ax = fig.add_subplot(322)
+    plt.rcParams['axes.facecolor'] = 'black'
+    #plt.rcParams['legend.handletextpad'] = 'white'
     plt.plot(t,plot_vec['eegPSI'])
     plt.legend(["PSI"],loc=1)
     plt.ylim([0, 100])
@@ -163,6 +164,8 @@ while True:
 
 
     ax = fig.add_subplot(323)
+    plt.rcParams['axes.facecolor'] = 'black'
+    #plt.rcParams['legend.handletextpad'] = 'white'
     plt.plot(t,plot_vec['capnoFiCO2'])
     plt.hold(True)
     plt.plot(t,plot_vec['capnoEtCO2'])
@@ -176,6 +179,8 @@ while True:
     plt.draw()
 
     ax = fig.add_subplot(324)
+    plt.rcParams['axes.facecolor'] = 'black'
+    #plt.rcParams['legend.handletextpad'] = 'white'
     plt.plot(t,plot_vec['nibpSYS'])
     plt.hold(True)
     plt.plot(t,plot_vec['nibpDIA'])
@@ -190,6 +195,8 @@ while True:
     plt.draw()
 
     ax = fig.add_subplot(325)
+    plt.rcParams['axes.facecolor'] = 'black'
+    #plt.rcParams['legend.handletextpad'] = 'white'
     plt.plot(t,plot_vec['tempParam'])
     plt.legend(["temperature"],loc=1)
     plt.ylim([0, 50])
@@ -199,6 +206,8 @@ while True:
     plt.draw()
 
     ax = fig.add_subplot(326)
+    plt.rcParams['axes.facecolor'] = 'black'
+    #plt.rcParams['legend.handletextpad'] = 'white'
     plt.plot(t,plot_vec['BPM'])
     plt.plot(t,plot_vec['eegPSI'])
     plt.legend(["BPM","PSI"],loc=1)
