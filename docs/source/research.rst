@@ -15,7 +15,7 @@ Usage
 
     device = Masimo()
     device.connect()
-    data =device.collect()
+    data = device.collect()
     device.close()
 
 Intput

@@ -14,7 +14,7 @@ from pymasimo import Masimo
 ```python
 device = Masimo()
 device.connect()
-data =device.collect()
+data = device.collect()
 device.close()
 ```
 
