@@ -127,7 +127,7 @@ while True:
     plot_vec = root.parseRoot(data)
     tmp = plot_vec['hour']
     if tmp[XTicks[-1]] != 0 :
-         Ticks = [(lambda x,tmp: tmp[x] )(x,tmp) for x in XTicks]
+        Ticks = [(lambda x,tmp: tmp[x] )(x,tmp) for x in XTicks]
     else:
         Ticks = [0]*len(XTicks)
 
